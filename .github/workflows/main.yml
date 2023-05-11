@@ -1,14 +1,12 @@
 name: Python package workflow
-
-on: [push]
-
+on: [ push ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11']
+        python-version: [ '3.8', '3.9', '3.10', '3.11' ]
     steps:
       - uses: actions/checkout@v3
 
@@ -18,3 +16,15 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Display python version
         run: python -V
+
+
+    check-bats-version:
+      needs: [ build ]
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-node@v3
+          with:
+            node-version: '14'
+        - run: npm install -g bats
+        - run: bats -v
