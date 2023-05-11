@@ -1,5 +1,5 @@
 name: Test test setup
-run-name: ${{ github.actor }} Test Python package workflow
+run-name: ${{ github.actor }} Test Python package workflow # if not defined, the commit message is used
 on:
   push:
     branches: [ main ]
