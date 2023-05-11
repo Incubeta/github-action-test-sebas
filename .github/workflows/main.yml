@@ -1,4 +1,4 @@
-name: ${{ GITHUB_ACTOR }} Test Python package workflow
+name: ${{ github.actor }} Test Python package workflow
 on:
   push:
     branches: [ main ]
