@@ -1,7 +1,8 @@
 name: ${{ GITHUB_ACTOR }} Test Python package workflow
 on:
-  branch: [ main ]
-
+  push:
+    branches: [ main ]
+    pull_request:
 jobs:
   build:
     runs-on: ubuntu-latest
