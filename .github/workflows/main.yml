@@ -54,6 +54,7 @@ jobs:
   finalize:
     needs: [ check-bats-version, check-bats-version-2, check-bats-version-fail]
     runs-on: ubuntu-latest
+    if: failure()
     steps:
       - name: Finalize
         run: echo "All done!"
