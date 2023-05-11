@@ -56,5 +56,9 @@ jobs:
     runs-on: ubuntu-latest
     if: failure()
     steps:
+      - name: 'Create ENV file'
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
+          cat .env
       - name: Finalize
         run: echo "All done!"
