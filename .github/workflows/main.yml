@@ -43,13 +43,13 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
 
-  check-bats-version-fail:
-    needs: [ build ]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: exit 1
-        name: Fail
+#  check-bats-version-fail:
+#    needs: [ build ]
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - run: exit 1
+#        name: Fail
   check-bats-version-sucess:
     needs: [ build ]
     runs-on: ubuntu-latest
