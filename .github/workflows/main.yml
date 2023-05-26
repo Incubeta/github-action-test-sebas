@@ -63,6 +63,7 @@ jobs:
     runs-on: ubuntu-latest
 #    if: failure()
     steps:
+      - uses: actions/checkout@v3
       - name: 'Create docs'
         run: |
           pip install mkdocs mkdocs-material
