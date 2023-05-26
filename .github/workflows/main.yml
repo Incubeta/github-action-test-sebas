@@ -50,7 +50,7 @@ jobs:
 #      - uses: actions/checkout@v3
 #      - run: exit 1
 #        name: Fail
-  check-bats-version-sucess:
+  check-bats-version-success:
     needs: [ build ]
     runs-on: ubuntu-latest
     steps:
@@ -59,7 +59,7 @@ jobs:
         name: Success
 
   finalize:
-    needs: [ check-bats-version, check-bats-version-2, check-bats-version-fail]
+    needs: [ check-bats-version, check-bats-version-2, check-bats-version-success]
     runs-on: ubuntu-latest
     if: failure()
     steps:
