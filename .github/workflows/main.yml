@@ -61,11 +61,11 @@ jobs:
   finalize:
     needs: [ check-bats-version, check-bats-version-2, check-bats-version-success]
     runs-on: ubuntu-latest
-    if: failure()
+#    if: failure()
     steps:
-      - name: 'Create ENV file'
+      - name: 'Create docs'
         run: |
-          echo "${{ secrets.ENV_FILE }}" > .env
-          cat .env
+          pip install mkdocs mkdocs-material
+          mkdocs gh-deploy --force
       - name: Finalize
         run: echo "All done!"
