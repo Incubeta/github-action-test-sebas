@@ -66,6 +66,7 @@ jobs:
       - name: 'Create docs'
         run: |
           pip install mkdocs mkdocs-material
+          cd mkdocs
           mkdocs gh-deploy --force
       - name: Finalize
         run: echo "All done!"
