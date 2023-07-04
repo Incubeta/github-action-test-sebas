@@ -2,7 +2,7 @@ name: Some nice testing if we can build to Container Registry
 on:
   push:
     branches:
-      - test-building
+      - staging
 
 jobs:
   build_and_push:
@@ -25,4 +25,4 @@ jobs:
 
       - name: 'Build and push'
         run: |
-          gcloud builds submit --tag gcr.io/glo-tech-dev-sebas/dqna-cloud:latest .
+          gcloud builds submit --tag gcr.io/glo-tech-dev-sebas/dqna-cloud:staging .
