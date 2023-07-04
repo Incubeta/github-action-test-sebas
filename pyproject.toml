@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "github-actions-test"
+version = "0.1.0"
+description = ""
+authors = ["Sebastiaan Pfennigwerth <spfennigwerth@outlook.com>"]
+readme = "README.md"
+packages = [{include = "github_actions_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "*"
+requests = "*"
+mkdocs = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
