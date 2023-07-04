@@ -25,4 +25,4 @@ jobs:
 
       - name: 'Build and push'
         run: |
-          gcloud builds submit --tag gcr.io/glo-tech-dev-sebas/dqna-cloud:staging .
+          gcloud builds submit --tag gcr.io/glo-tech-dev-sebas/dqna-cloud:staging . --project=glo-tech-dev-sebas
