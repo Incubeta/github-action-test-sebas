@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - test-building
+
 jobs:
   build_and_push:
     runs-on: self-hosted
